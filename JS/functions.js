@@ -11,7 +11,11 @@ function adjustElements () {
         borderTopWidth: screenSize.Y ,
         borderRightWidth: screenSize.X * .3
     });
-    
+    $(".projects-wrapper").animate({height: (screenSize.Y - 160)}, 
+            function() {
+                $(".project-container").animate({height: ($(".projects-wrapper").height() - 100)});
+            }
+        );
 }
 
 function introAnimation () {
@@ -75,6 +79,7 @@ function randomColor () {
 
 function sortProjects (criteria) {
     
+    filterCriteria = criteria;
     $('.projects').isotope({filter: criteria});
     
 }
@@ -83,10 +88,19 @@ function getProjects (criteria) {
     alert("Project Selected");
 }
 
-function mainJS() {
-    basket.require(
-                { url: 'JS/main.js', skipCache: true },
-                { url: 'JS/FlickrAPI.js', skipCache: true }
-            ); 
+function windowLoaded() {
+    
+    $('.dark-screen').fadeOut(1000);
+    introAnimation();
+            
+    $('.projects').isotope({
+                        itemSelector: '.project-element',
+                        percentPosition: true,
+                        containerStyle: null,
+                        resizable: false,
+                        masonry: {
+                            columnWidth: '.project-sizer' 
+                        }
+                    });
 };
 

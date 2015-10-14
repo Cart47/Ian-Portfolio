@@ -102,8 +102,7 @@ $(document).ready(function() {
 
             });
             
-            $('.dark-screen').fadeOut(1000);
-            introAnimation();
+            windowLoaded();
             
          });
         

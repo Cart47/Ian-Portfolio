@@ -673,7 +673,7 @@ section {
     .projects-wrapper {
         position: absolute;
         z-index: 1000;
-        top: 4em;
+        top: 3em;
         left: 5em;   
         width: 90%;
         height: 75%;
@@ -681,7 +681,7 @@ section {
         h2 {
             margin: 0 0 .25em 0;
             font-family: 'Playball', cursive;
-            font-size: em(40);
+            font-size: em(45);
             font-weight: bolder;
             z-index: 103;
             color: #000000;
@@ -716,9 +716,16 @@ section {
             }
         }
         
-        .projects {
-            width: 100%;
+        .project-container {
             position: relative;
+            z-index: 1005;
+            width: 100%;
+        }
+        
+        .projects {
+            position: absolute!important;
+            height: 100%!important;
+            width: 100%;
             z-index: 1005;
             
             .project-tag {
@@ -734,7 +741,7 @@ section {
             }
  
             .project-element {
-                height: 8em;
+                height: 25%;
                 overflow: hidden;
                 cursor: pointer;
                 
@@ -766,10 +773,10 @@ section {
                     p {
                         font-family: 'Raleway', sans-serif;
                         font-weight: 900;
-                        font-size: em(50);
                         color: #000000;
                         vertical-align: middle;
                         line-height: em(15);
+                        margin-bottom: 0!important;
                         text-shadow:
                            -2px -2px 0 #fff,  
                             2px -2px 0 #fff,
@@ -782,7 +789,7 @@ section {
             }
             
             .doubleWide { width: 40%}
-            .doubleHigh { height: 16em; } 
+            .doubleHigh { height: 50%; } 
         }
     }
     
@@ -809,3 +816,29 @@ section {
     opacity: .1;
 }
 
+.citf { font-size:3em } //CITF
+.alderwood { font-size:2.25em; margin-top:1em; } //Alderwood
+.nakedStock { font-size: 2em } //Naked Stock
+.tripout { font-size: 4em } //TripnOut
+.planets { font-size: 2.5em } //Planets
+.caplans { font-size:2.5em } //CAplans
+.design7J { font-size: 3em; margin-top:1.5em; } // 7J
+.TOWeb { font-size: 3em; } // TO Web
+.webpro { font-size: 3em; margin-top: 1.5em;} //WebPro
+.halal { font-size: 2em; margin-top: 1em; } // Zabiha
+.solkor { font-size: 3em; } //Solkor
+.rcc { font-size: 2em}  // RCC Waterproofing
+.portfolio { font-size:2em; margin-top: .5em;} //Old Porfolio
+
+.contact-section {
+    background-color: #ffffff;
+    
+    .contact-wrapper {
+        position: absolute;
+        z-index: 1000;
+        top: 3em;
+        left: 5em;   
+        width: 90%;
+        height: 75%;
+    }
+}

@@ -1,6 +1,6 @@
 if(!modal)
 {
- basket.require(
+    basket.require(
                 { url: 'JS/main.js', skipCache: true },
                 { url: 'JS/FlickrAPI.js', skipCache: true }
             );

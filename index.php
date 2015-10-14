@@ -57,11 +57,11 @@ else
                     { url: 'JS/jquery.easing.min.js', expire: 168},
                     { url: 'JS/supersized.3.2.7.min.js', expire: 168},
                     { url: 'JS/jquery.onepage-scroll.min.js', expire: 168},
+                    { url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', expire: 168}
                 )
                 .then(function() {
                     basket.require(
-                        { url: "JS/modal.js", skipCache: true },
-                        { url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', expire: 168}
+                        { url: "JS/modal.js", skipCache: true }
                     )
                 })
         
@@ -280,7 +280,7 @@ else
                            <img class="project-image" src="img/CITF-screen.jpg" alt="Chorus in the Forest project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:60px">Chorus <br> in <br>  the <br>  Forest</p>
+                                    <p class="citf">Chorus <br> in <br>  the <br>  Forest</p>
                                 </div>
                             </a>
                         </div>
@@ -288,7 +288,7 @@ else
                            <img class="project-image" src="img/aldershot-screen.png" alt="Aldershot Communications project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:35px; margin-top:1em;">Alderwood</p>
+                                    <p class="alderwood">Alderwood</p>
                                 </div>
                             </a>
                         </div>
@@ -296,7 +296,7 @@ else
                            <img class="project-image" src="img/NakedStock-screen.png" alt="Naked Stock project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:40px">Naked <br>  Stock <br>  Cafe</p>
+                                    <p class="nakedStock">Naked <br>  Stock <br>  Cafe</p>
                                 </div>
                             </a>
                         </div>
@@ -304,7 +304,7 @@ else
                            <img class="project-image" src="img/tripnout-screen.png" alt="Trip n Out project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:80px">Trip <br>  n <br>  Out</p>
+                                    <p class="tripout">Trip <br>  n <br>  Out</p>
                                 </div>
                             </a>
                         </div>
@@ -312,7 +312,7 @@ else
                            <img class="project-image" src="img/space-screen.png" alt="The Planets project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p>The <br>  Planets</p>
+                                    <p class="planets">The <br>  Planets</p>
                                 </div>
                             </a>
                         </div>
@@ -320,7 +320,7 @@ else
                            <img class="project-image" src="img/caplans-screen.jpg" alt="Caplans Appliances project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:40px">Caplans Appliances</p>
+                                    <p class="caplans">Caplans Appliances</p>
                                 </div>
                             </a>
                         </div>
@@ -328,7 +328,7 @@ else
                            <img class="project-image" src="img/7jdesign-screen.png" alt="7J Design project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="margin-top:2em;">7J <br> Design</p>
+                                    <p class="design7J">7J <br> Design</p>
                                 </div>
                             </a>
                         </div>
@@ -336,7 +336,7 @@ else
                            <img class="project-image" src="img/TOWD-screen.png" alt="Toronto Web Design project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p>Toronto <br>  Web Design</p>
+                                    <p class="TOWeb">Toronto <br>  Web Design</p>
                                 </div>
                             </a>
                         </div>
@@ -344,7 +344,7 @@ else
                            <img class="project-image" src="img/webpro-screen.png" alt="WebPro Canada project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="margin-top:2em;">WebPro <br>  Canada</p>
+                                    <p class="webpro">WebPro <br>  Canada</p>
                                 </div>
                             </a>
                         </div>
@@ -352,7 +352,7 @@ else
                            <img class="project-image" src="img/zabihah-screen.jpeg" alt="Zabiha Halal project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p>Zabiha Halal</p>
+                                    <p class="halal">Zabiha Halal</p>
                                 </div>
                             </a>
                         </div>
@@ -360,7 +360,7 @@ else
                            <img class="project-image" src="img/solkor-screen.jpg" alt="Solkor Landscaping project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:30px">Solkor Landscaping</p>
+                                    <p class="solkor">Solkor Landscaping</p>
                                 </div>
                             </a>
                         </div>
@@ -368,7 +368,7 @@ else
                            <img class="project-image" src="img/RCC-screen.jpg" alt="RCC Waterproofing project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:30px">RCC Waterproofing</p>
+                                    <p class="rcc">RCC Waterproofing</p>
                                 </div>
                             </a>
                         </div>
@@ -376,7 +376,7 @@ else
                            <img class="project-image" src="img/IGPortfolio-screen.png" alt="Ian Gauthier Portfolio project">
                             <a class="project-tag" project-number="1">
                                 <div class="inner-project">
-                                    <p style="font-size:35px">Ian Gauthier <br> Old Portfolio</p>
+                                    <p class="portfolio">Ian Gauthier <br> Old Portfolio</p>
                                 </div>
                             </a>
                         </div>

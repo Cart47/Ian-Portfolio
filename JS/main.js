@@ -1,6 +1,8 @@
 //Main variable and JS scripts for Ian Gauthier's Portfolio
 
 var screenSize;
+var filterCriteria;
+
 var elements = {
     2: [ ".intro-content h2",".intro-content p"]  
 };
@@ -83,14 +85,6 @@ $(function(){
       }
     });
     
-    $('.projects').isotope({
-        itemSelector: '.project-element',
-        percentPosition: true,
-        masonry: {
-            columnWidth: '.project-sizer' 
-        }
-    });
-    
     if (modal) {
         $('.dark-screen').fadeOut(1000);
     }
@@ -98,12 +92,11 @@ $(function(){
   
 });
 
-
 $(window).resize(function(){
-    
     
     screenMeasure();
     adjustElements();
+    $(".projects").isotope('layout');
     
 });
 

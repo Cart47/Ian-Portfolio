@@ -2594,14 +2594,14 @@ section {
   .projects-section .projects-wrapper {
     position: absolute;
     z-index: 1000;
-    top: 4em;
+    top: 3em;
     left: 5em;
     width: 90%;
     height: 75%; }
     .projects-section .projects-wrapper h2 {
       margin: 0 0 .25em 0;
       font-family: 'Playball', cursive;
-      font-size: 2.5em;
+      font-size: 2.8125em;
       font-weight: bolder;
       z-index: 103;
       color: #000000; }
@@ -2670,9 +2670,14 @@ section {
         border-bottom-right-radius: 0.625em; }
         .projects-section .projects-wrapper .project-sorting button:focus {
           outline: none; }
-    .projects-section .projects-wrapper .projects {
-      width: 100%;
+    .projects-section .projects-wrapper .project-container {
       position: relative;
+      z-index: 1005;
+      width: 100%; }
+    .projects-section .projects-wrapper .projects {
+      position: absolute !important;
+      height: 100% !important;
+      width: 100%;
       z-index: 1005; }
       .projects-section .projects-wrapper .projects .project-tag {
         position: absolute;
@@ -2683,7 +2688,7 @@ section {
       .projects-section .projects-wrapper .projects .project-sizer, .projects-section .projects-wrapper .projects .project-element {
         width: 20%; }
       .projects-section .projects-wrapper .projects .project-element {
-        height: 8em;
+        height: 25%;
         overflow: hidden;
         cursor: pointer; }
         .projects-section .projects-wrapper .projects .project-element:hover {
@@ -2711,15 +2716,15 @@ section {
           .projects-section .projects-wrapper .projects .project-element .inner-project p {
             font-family: 'Raleway', sans-serif;
             font-weight: 900;
-            font-size: 3.125em;
             color: #000000;
             vertical-align: middle;
             line-height: 0.9375em;
+            margin-bottom: 0 !important;
             text-shadow: -2px -2px 0 #fff,   2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff; }
       .projects-section .projects-wrapper .projects .doubleWide {
         width: 40%; }
       .projects-section .projects-wrapper .projects .doubleHigh {
-        height: 16em; }
+        height: 50%; }
   .projects-section .samples-img {
     position: absolute;
     bottom: 5%;
@@ -2737,6 +2742,60 @@ section {
   width: 100%;
   height: 100%;
   opacity: .1; }
+
+.citf {
+  font-size: 3em; }
+
+.alderwood {
+  font-size: 2.25em;
+  margin-top: 1em; }
+
+.nakedStock {
+  font-size: 2em; }
+
+.tripout {
+  font-size: 4em; }
+
+.planets {
+  font-size: 2.5em; }
+
+.caplans {
+  font-size: 2.5em; }
+
+.design7J {
+  font-size: 3em;
+  margin-top: 1.5em; }
+
+.TOWeb {
+  font-size: 3em; }
+
+.webpro {
+  font-size: 3em;
+  margin-top: 1.5em; }
+
+.halal {
+  font-size: 2em;
+  margin-top: 1em; }
+
+.solkor {
+  font-size: 3em; }
+
+.rcc {
+  font-size: 2em; }
+
+.portfolio {
+  font-size: 2em;
+  margin-top: .5em; }
+
+.contact-section {
+  background-color: #ffffff; }
+  .contact-section .contact-wrapper {
+    position: absolute;
+    z-index: 1000;
+    top: 3em;
+    left: 5em;
+    width: 90%;
+    height: 75%; }
 
 /*
 
