@@ -1,0 +1,20 @@
+@import "bourbon/bourbon";
+@import "_variables";
+@import "font-awesome/font-awesome";
+@import "common";
+@import "plugins";
+
+
+@media screen and (max-width: 768px) {
+    @import "responsive/0-768.scss";
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    @import "responsive/769-991.scss";
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    @import "responsive/992-1199.scss";
+}
+@media (min-width: 1200px) {
+    @import "responsive/1200.scss";
+}
