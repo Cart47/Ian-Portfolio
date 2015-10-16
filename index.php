@@ -18,6 +18,9 @@ if (isset($_SESSION["session"]))
     if(isset($_SESSION["name"]))  $name = $_SESSION["name"];
     if(isset($_SESSION["place"])) $place = $_SESSION["place"];
     if(isset($_SESSION["color"])) $color = $_SESSION["color"];
+    if(isset($_SESSION["username"])) { $username = $_SESSION["username"]; } else { $username = $name; };
+    if(isset($_SESSION["useremail"])) $email = $_SESSION["useremail"];
+    if(isset($_SESSION["usermessage"])) $message = $_SESSION["usermessage"];
 } 
 else
 {
@@ -386,17 +389,39 @@ else
             </section>
             <section class="contact-section">
                 <div class="contact-wrapper">
-                    <h3>Feel free to drop me a line using the form below, by <a href="mailto:IanGauthier@me.com">emailing me </a> or give me a ring at 613-929-9365.</h3>
-                    <form action="contact.php" method="post">
-                        <label for='cf_name'>Your name:</label><br>
-                        <input type="text" name="cf_name"><br>
-                        <label for='cf_email'>Your e-mail:</label><br>
-                        <input type="text" name="cf_email"><br>
-                        <label for='cf_message'>Message:</label><br>
-                        <textarea name="cf_message"></textarea>
-                        <br>
-                        <input type="submit" value="Send">
-                        <input type="reset" value="Clear">
+                    <div class="col-sm-12">
+                        <h3 class="col-sm-push-1 col-sm-10">Feel free to drop me a line, <?php echo $name; ?> by using the form below</h3>
+                    </div>
+                    <form class="form-horizontal clearfix" role="form" method="post" action="contact.php"  data-parsley-validate>
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value=<?php if(isset($username)){ echo '"' . $username . '"'; } else { echo '""';} ?> required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" data-parsley-type="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" rows="4" name="message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                            </div>
+                        </div>
                     </form>
 
                 </div>

@@ -2447,7 +2447,7 @@ section {
     height: 80%; }
     .skills-section .skills-wrapper h2 {
       position: relative;
-      width: 70%;
+      width: 100%;
       font-weight: lighter;
       font-family: 'Playball', cursive;
       font-size: 2em;
@@ -2482,7 +2482,8 @@ section {
         .skills-section .skills-wrapper .skills .skill-group li {
           list-style: none;
           margin: 0.1875em 0;
-          font-size: 1.0625em;
+          font-size: 1em;
+          line-height: 1em;
           color: red; }
           .skills-section .skills-wrapper .skills .skill-group li:hover {
             text-decoration: underline;
@@ -2490,8 +2491,8 @@ section {
             cursor: crosshair; }
     .skills-section .skills-wrapper .graph-wrapper {
       position: absolute;
-      z-index: 105;
-      right: 2%;
+      z-index: 101;
+      right: 5%;
       width: 50%;
       height: 75%; }
       .skills-section .skills-wrapper .graph-wrapper .vertical-line {
@@ -2549,12 +2550,13 @@ section {
         text-align: right; }
     .skills-section .skills-wrapper .drop-here:before {
       content: "Drop Here";
-      z-index: 1500;
+      z-index: 103;
       position: absolute;
       padding: 3.125em;
       width: 100%;
       height: 100%;
       font-size: 1.875em;
+      opacity: .8;
       color: #000000;
       background-color: rgba(255, 255, 255, 0.2);
       border-top-left-radius: 0.625em;
@@ -2567,7 +2569,7 @@ section {
       border-top-left-radius: 0.625em; }
     .skills-section .skills-wrapper .item-hover {
       background-color: rgba(255, 255, 255, 0.8);
-      z-index: 1501;
+      z-index: 103;
       border-top-left-radius: 0.625em;
       border-top-right-radius: 0.625em;
       border-bottom-right-radius: 0.625em;
@@ -2792,10 +2794,29 @@ section {
   .contact-section .contact-wrapper {
     position: absolute;
     z-index: 1000;
-    top: 3em;
+    top: 5em;
     left: 5em;
     width: 90%;
     height: 75%; }
+    .contact-section .contact-wrapper h3 {
+      margin: 0 0 .25em 0;
+      font-family: 'Playball', cursive;
+      font-size: 2.8125em;
+      font-weight: bolder;
+      z-index: 103;
+      color: #000000; }
+
+.contact-section:before {
+  content: " ";
+  position: absolute;
+  background: url("../img/grunge-overlay.png") center center no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  opacity: .1; }
 
 /*
 

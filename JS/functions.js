@@ -11,11 +11,9 @@ function adjustElements () {
         borderTopWidth: screenSize.Y ,
         borderRightWidth: screenSize.X * .3
     });
-    $(".projects-wrapper").animate({height: (screenSize.Y - 160)}, 
-            function() {
-                $(".project-container").animate({height: ($(".projects-wrapper").height() - 100)});
-            }
-        );
+    $('.graph-wrapper').width($('.graph-wrapper').height());
+    $(".projects-wrapper").css({height: (screenSize.Y - 160)}); 
+    $(".project-container").css({height: ($(".projects-wrapper").height() - 100)});
 }
 
 function introAnimation () {
@@ -91,16 +89,15 @@ function getProjects (criteria) {
 function windowLoaded() {
     
     $('.dark-screen').fadeOut(1000);
+    adjustElements();
     introAnimation();
             
     $('.projects').isotope({
-                        itemSelector: '.project-element',
-                        percentPosition: true,
-                        containerStyle: null,
-                        resizable: false,
-                        masonry: {
-                            columnWidth: '.project-sizer' 
-                        }
-                    });
+        itemSelector: '.project-element',
+        percentPosition: true,
+        masonry: {
+            columnWidth: '.project-sizer' 
+        }
+    });
 };
 

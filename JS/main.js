@@ -13,7 +13,6 @@ var linkColour = $(".intro-content h2").css("color");
 $(function(){
     
     screenMeasure();
-    adjustElements();
     
    prepareElements(elements);
     
@@ -96,7 +95,6 @@ $(window).resize(function(){
     
     screenMeasure();
     adjustElements();
-    $(".projects").isotope('layout');
     
 });
 
