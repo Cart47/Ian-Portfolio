@@ -411,15 +411,15 @@ section {
 .intro-content {
     position: absolute;
     width: 65%;
-    left: 22%;
+    left: 22em;
     top: 4em;
     
     h2 {
         position: relative;
-        font-size: em(28);
+        font-size: em(40);
         width: 90%;
         z-index: 103;
-        font-family: 'Press Start 2P', cursive;
+        font-family: 'Playball', cursive;
         color: $primary-color;
     }
     
@@ -431,8 +431,9 @@ section {
         font-family:  'Poiret One', sans-serif;
         
         &.work-call {
-            margin-top: em(15);
-            font-size: em(24);
+            margin-top:.75em;
+            font-size: em(22);
+            
         }
         
         a {
@@ -511,12 +512,12 @@ section {
         
         h2 {
             position: relative;
-            width: 100%;;
+            width: 100%;
             font-weight: lighter;
             font-family: 'Playball', cursive;
-            font-size: em(32);
+            font-size: em(40);
             z-index: 103;
-            color: #000000;
+            color: $primary-color;
             margin-bottom: 0;
         }
         p { 
@@ -531,8 +532,8 @@ section {
             z-index: 105;
             width: 50%;
             
-            .left-column { width: 50%; float: left; }
-            .right-column { width: 50%; float: right;  }
+            .left-column { width: 50%; float: left; max-width: 20em; }
+            .right-column { width: 50%; float: right; max-width: 20em;  }
             
             .skill-group {
                 width: 100%;
@@ -540,24 +541,26 @@ section {
                 float: left;
               
                 h3 { 
-                    font-family: 'Playball', cursive;
+                    font-family: 'Poiret One', sans-serif;
+                    font-size: 1.5em;
                     margin: 0 0 em(10) em(-15);
+                    padding-bottom: .1em;
                     color: #000000;
-                    text-decoration: underline;
+                    border-bottom: 2px solid #000000;
                 }
                 
                 li {
                     list-style: none;
                     margin: em(3) 0;
-//                    font-family: 'Poiret One', cursive;
-                    font-size: 1em;
-                    line-height: 1em;
+                    font-family: 'Poiret One', cursive;
+                    font-size: 1.1em;
+                    line-height: 1.25em;
                     color: $primary-color;
                     
                     &:hover {
                         text-decoration: underline;
                         color: #000000;
-                        cursor:crosshair;
+                        cursor:move;
                     }
                 }
             }
@@ -566,7 +569,7 @@ section {
         .graph-wrapper {
             position: absolute;
             z-index: 101;
-            right: 5%;
+            right: 10%;
             width: 50%;
             height: 75%;
             
@@ -615,7 +618,7 @@ section {
             }
             
             span {
-                &.top-rated, &.bottom-rated, &.left-rated, &.right-rated {  width: em(150); position: absolute; display: block; font-family: "Poiret One", sans-serif; font-size: em(14); color: #000000;}
+                &.top-rated, &.bottom-rated, &.left-rated, &.right-rated {  width: em(150); position: absolute; display: block; font-family: "Poiret One", sans-serif; font-size: em(16); color: #000000;}
                 &.top-rated { top: 0; padding-left: em(5); }
                 &.bottom-rated {bottom: 0; padding-left: em(5); }
                 &.left-rated { left: 0; }
@@ -776,9 +779,12 @@ section {
                         font-family: 'Raleway', sans-serif;
                         font-weight: 900;
                         color: #000000;
-                        vertical-align: middle;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-right: -50%;
+                        @include transform(translate(-50%, -50%));
                         line-height: em(15);
-                        margin-bottom: 0!important;
                         text-shadow:
                            -2px -2px 0 #fff,  
                             2px -2px 0 #fff,
@@ -819,18 +825,18 @@ section {
 }
 
 .citf { font-size:3em } //CITF
-.alderwood { font-size:2.25em; margin-top:1em; } //Alderwood
+.alderwood { font-size:2.25em;} //Alderwood
 .nakedStock { font-size: 2em } //Naked Stock
 .tripout { font-size: 4em } //TripnOut
 .planets { font-size: 2.5em } //Planets
 .caplans { font-size:2.5em } //CAplans
-.design7J { font-size: 3em; margin-top:1.5em; } // 7J
+.design7J { font-size: 3em; } // 7J
 .TOWeb { font-size: 3em; } // TO Web
-.webpro { font-size: 3em; margin-top: 1.5em;} //WebPro
-.halal { font-size: 2em; margin-top: 1em; } // Zabiha
-.solkor { font-size: 3em; } //Solkor
+.webpro { font-size: 3em; } //WebPro
+.halal { font-size: 2em; } // Zabiha
+.solkor { font-size: 2em; } //Solkor
 .rcc { font-size: 2em}  // RCC Waterproofing
-.portfolio { font-size:2em; margin-top: .5em;} //Old Porfolio
+.portfolio { font-size:2em; } //Old Porfolio
 
 .contact-section {
     background-color: #ffffff;
@@ -850,6 +856,11 @@ section {
             font-weight: bolder;
             z-index: 103;
             color: #000000;
+        }
+        
+        textarea {
+            height: 15em;
+            resize: none;
         }
     }
 }

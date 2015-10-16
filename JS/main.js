@@ -70,7 +70,7 @@ $(function(){
       activeClass: "drop-here",
       hoverClass: "item-hover",
       drop: function( event, ui ) {
-        var horPos = (ui.draggable.attr("passion")*9.5) + '%',
+        var horPos = (ui.draggable.attr("passion")*10) + '%',
             vertPos = (ui.draggable.attr("experience")*10) + '%',
             color = randomColor(),
             colorString = "rgb(" + color.red + "," + color.green + "," + color.blue + ")",
@@ -83,6 +83,8 @@ $(function(){
         $(ui.draggable).remove(); 
       }
     });
+    
+    $('#contact-form').parsley();
     
     if (modal) {
         $('.dark-screen').fadeOut(1000);

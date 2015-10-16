@@ -95,10 +95,10 @@ else
         <div class="form-wrapper">
             <p class="modal-header">Welcome to Ian Gauthier's Portfolio </p>
             <p class="modal-subhead"> Please Provide the Following Details</p>
-          <form action="index.php" method="post" data-parsley-validate>
+          <form id="modal-form" action="index.php" method="post">
             <fieldset>
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Please Provide a Name" required>
+              <input type="text" name="name" id="name" placeholder="Please Provide a Name" autofocus required>
               <label for="place">Favourite Place</label>
               <input type="text" name="place" id="place" placeholder="What is your Favourite City to Visit?" required> 
               <label for="color">Favourite Colour</label>
@@ -392,7 +392,7 @@ else
                     <div class="col-sm-12">
                         <h3 class="col-sm-push-1 col-sm-10">Feel free to drop me a line, <?php echo $name; ?> by using the form below</h3>
                     </div>
-                    <form class="form-horizontal clearfix" role="form" method="post" action="contact.php"  data-parsley-validate>
+                    <form class="form-horizontal" id="contact-form" role="form" method="post" action="contact.php">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-8">
@@ -402,13 +402,13 @@ else
                         <div class="form-group">
                             <label for="email" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" data-parsley-type="email" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value=<?php if(isset($useremail)){ echo '"' . $useremail . '"'; } else { echo '""';} ?> required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message" class="col-sm-2 control-label">Message</label>
                             <div class="col-sm-8">
-                                <textarea class="form-control" rows="4" name="message" required></textarea>
+                                <textarea class="form-control" rows="4" name="message" placeholder="Place Message Here" required><?php if(isset($usermessage)) echo '"' . $usermessage . '"'; ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -419,7 +419,7 @@ else
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
-                                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                                <button id="form-submit" name="form-submit" type="submit"  class="btn btn-primary">Send</button>
                             </div>
                         </div>
                     </form>

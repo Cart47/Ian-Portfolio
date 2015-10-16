@@ -20,7 +20,7 @@ if ( !$error )
         $errMessage = null; 
         $errName = null;
         
-        $body = "From: $name\n\n E-Mail: $email\n\n Message:\n $message";
+        $body = "$message";
  
  
 // If there are no errors, send the email

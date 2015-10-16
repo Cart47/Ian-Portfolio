@@ -7,5 +7,6 @@ if(!modal)
 }
 else 
 {
+    $('#modal-form').parsley();
     $('.dark-screen').fadeOut(1000);
 }
