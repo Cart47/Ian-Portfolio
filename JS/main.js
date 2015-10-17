@@ -8,11 +8,11 @@ var elements = {
 };
 
 var linkColour = $(".intro-content h2").css("color");
-
+var originalModal = $('#project-modal').html();
 
 $(function(){
     
-    screenMeasure();
+   screenMeasure();
     
    prepareElements(elements);
     
@@ -57,8 +57,11 @@ $(function(){
         $(this).animate({backgroundColor: "black", color: "#ffffff"});
     });
     
-     $('.project-element').click(function () {
-        getProjects($(this).attr('index-value'));
+     $('.project-tag').click(function (e) {
+         getProjects($(this).attr('project-number'));
+         $( "#project-modal" ).dialog( "option", "width", (screenSize.X * .95) );
+         $( "#project-modal" ).dialog( "option", "height", (screenSize.Y * .95) );
+         $( "#project-modal" ).dialog( "open" );
     });
     
     $( ".skill-group li" ).draggable({
@@ -82,6 +85,21 @@ $(function(){
         $( this ).append(appendString);
         $(ui.draggable).remove(); 
       }
+    });
+    
+    $( "#project-modal" ).dialog({
+      autoOpen: false,
+      draggable: false,
+      show: {
+        effect: "size",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 500
+      },
+      open: function( event, ui ) { $('.darkened-background').fadeIn(500); },
+      close: function( event, ui ) { $('.darkened-background').fadeOut(200); destroyDialog(); }    
     });
     
     $('#contact-form').parsley();

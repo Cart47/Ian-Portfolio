@@ -15,12 +15,7 @@ if ( !$error )
         $to = 'IanGauthier@me.com'; 
         $from = "From: " . $email . "\r\n"; 
         $subject = 'Message from ' . $name;
-        $errEmail = null; 
-        $errHuman = null; 
-        $errMessage = null; 
-        $errName = null;
-        
-        $body = "$message";
+        $body = "From: $name\n\n E-Mail: $email\n\n Message:\n $message";
  
  
 // If there are no errors, send the email

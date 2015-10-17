@@ -60,6 +60,7 @@ else
                     { url: 'JS/jquery.easing.min.js', expire: 168},
                     { url: 'JS/supersized.3.2.7.min.js', expire: 168},
                     { url: 'JS/jquery.onepage-scroll.min.js', expire: 168},
+                    { url: 'JS/jquery.flexslider-min.js', expire: 168},
                     { url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', expire: 168}
                 )
                 .then(function() {
@@ -185,7 +186,6 @@ else
             <section class="skills-section">
                 <div class="skills-wrapper">
                     <h2>Take a Look <?php echo $name ?>, I Have a Few Skills You Might Find Helpful</h2>
-                    <p>(Drag the desired skill onto the graph to find out more)</p>
                     <div class="skills">
                            <div class="left-column">
                                 <div class="skill-group">
@@ -258,6 +258,23 @@ else
                 </div>
             </section>
             <section class="projects-section">
+               <div id="project-modal">
+                  <div class="project-overview">
+                       <h3 class="modal-head"></h3>
+                       <p class="modal-description"></p>
+                       <div class="flexslider" id="carousel">
+                           <ul class="slides"></ul>
+                       </div>
+                   </div>
+                   <div class="modal-slider">
+                      <div class="loading-modal">
+                          <img src="img/loading_spinner.gif">
+                      </div>
+                       <div class="flexslider" id="slider">
+                           <ul class="slides"></ul>
+                       </div>
+                   </div>
+               </div>
                 <div class="projects-wrapper">
                     <h2>Examples of Projects I've Worked On</h2>
                     <div class="project-sorting">
@@ -289,7 +306,7 @@ else
                         </div>
                         <div class="project-element rwd sass">
                            <img class="project-image" src="img/aldershot-screen.png" alt="Aldershot Communications project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="3">
                                 <div class="inner-project">
                                     <p class="alderwood">Alderwood</p>
                                 </div>
@@ -297,7 +314,7 @@ else
                         </div>
                         <div class="project-element js jq rwd">
                            <img class="project-image" src="img/NakedStock-screen.png" alt="Naked Stock project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="4">
                                 <div class="inner-project">
                                     <p class="nakedStock">Naked <br>  Stock <br>  Cafe</p>
                                 </div>
@@ -305,7 +322,7 @@ else
                         </div>
                         <div class="project-element doubleWide doubleHigh js rwd ang node mdb">
                            <img class="project-image" src="img/tripnout-screen.png" alt="Trip n Out project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="2">
                                 <div class="inner-project">
                                     <p class="tripout">Trip <br>  n <br>  Out</p>
                                 </div>
@@ -313,7 +330,7 @@ else
                         </div>
                         <div class="project-element">
                            <img class="project-image" src="img/space-screen.png" alt="The Planets project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="5">
                                 <div class="inner-project">
                                     <p class="planets">The <br>  Planets</p>
                                 </div>
@@ -321,7 +338,7 @@ else
                         </div>
                         <div class="project-element php js rwd jq less bs">
                            <img class="project-image" src="img/caplans-screen.jpg" alt="Caplans Appliances project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="6">
                                 <div class="inner-project">
                                     <p class="caplans">Caplans Appliances</p>
                                 </div>
@@ -427,6 +444,7 @@ else
                 </div>
             </section>
         </div>
+        <div class="darkened-background"></div>
 </body>
 
 </html>

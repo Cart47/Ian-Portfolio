@@ -47,6 +47,8 @@ function prepareElements(elements) {
         });
     });
     
+    $('.darkened-background').hide();
+    
 }
 
 function slideAnimation(slideIndex) {
@@ -83,7 +85,70 @@ function sortProjects (criteria) {
 }
 
 function getProjects (criteria) {
-    alert("Project Selected");
+    var urldata = 'projectID=' + criteria;
+    $.ajax({                                      
+      url: 'projectDB.php',                  //the script to call to get data          
+      data: urldata,                        //you can insert url argumnets here to pass to api.php
+                                       //for example "id=5&parent=6"
+      dataType: 'json',                //data format      
+      success: function(data)          //on recieve of reply
+      {
+        makeDialog(data);
+      },
+      error: function(error)          //on recieve of reply
+      { 
+        alert("No information for that project yet");
+      }     
+    });
+    
+}
+
+function makeDialog(data) {
+
+    $('.modal-head').html(data.title);
+    $('.modal-description').html(data.description);
+    $.each(data.images, function(key, value){
+        var image = '<img src="' + value.url + '" title=' + value.title + '"/>';
+        var caption = '<p class="flex-caption">' + value.description + '</p>';
+        $('#carousel .slides').append('<li>' + image + '</li>');
+        $('#slider .slides').append('<li>' + image + caption + '</li>');
+    });
+    initializeSliders();
+    
+}
+
+function destroyDialog() {
+    
+    $('#project-modal').css({ width: "", height: "" });
+    $('#project-modal').html(originalModal);
+}
+
+function initializeSliders() {
+    
+    $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        directionNav: false,
+        itemWidth: 100,
+        asNavFor: '#slider'
+    });
+    
+    $('#slider').flexslider({
+        animation: "fade",
+        slideshow: false,
+        animationLoop: false,
+        animationSpeed: 1000,
+        directionNav: false,
+        controlNav: false,
+        start: function() {
+            $('.flexslider').resize()
+            $('.loading-modal').fadeOut(1000);
+        },
+        sync: "#carousel"
+    });
+    
 }
 
 function windowLoaded() {
