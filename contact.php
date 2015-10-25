@@ -1,4 +1,5 @@
 <?php
+if(!isset($_SESSION)) { session_start();}
 $error = false;
 
 
@@ -8,7 +9,7 @@ empty($_POST["message"]) ? $error = true : $message = $_POST['message'] ;
       
 if(isset($name)){ $_SESSION["username"] = $name; }
 if(isset($email)) { $_SESSION["useremail"] = $email; }
-if(isset($message)) {  $_SESSION["usermeassage"] = $message; }
+if(isset($message)) {  $_SESSION["usermessage"] = $message; }
 
 if ( !$error ) 
 {        

@@ -1,3 +1,42 @@
 body {
-   color: blue;
+   font-size: 1.4em;
+}
+
+.skills-section {
+    
+    .skills-wrapper {
+        
+        h2 {
+            font-size: em(30);
+            
+        }
+        
+         .graph-container {
+            width: 40%;
+            right: 5%;
+            
+        }
+        
+        .skills {
+            
+            .left-column { max-width: 16em; }
+            .right-column { max-width: 16em; margin-left: .75em; }
+            
+            .skill-group {
+                h3 { 
+                    font-size: 1.25em;
+                    margin: 0 0 em(10) em(-15);
+                    padding-bottom: .1em;
+                    color: #000000;
+                    border-bottom: 1px solid #000000;
+                }
+                
+                li {
+                    font-size: 1em;
+                    line-height: 1.2em;
+                }
+            }
+        }
+        
+    }
 }

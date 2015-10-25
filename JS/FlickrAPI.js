@@ -16,9 +16,10 @@ var placeIdURL,
     privacy = '&privacy_filter=1',
     content = '&content_type=1',
     geo = '&geo_context=2',
-    radius = '&radius=32',
+    tags = '&tags=landscape,city,water,music,nature,architecture,park,',
+    radius = '&radius=50',
     extras = '&extras=url_o',
-    per_page = '&per_page=50';
+    per_page = '&per_page=500';
 
 var url_place = mainURL + methodURL + apiKey + apiFormat + placeURL;
 

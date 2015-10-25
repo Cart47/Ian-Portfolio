@@ -36,12 +36,13 @@ else
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ian Gauthier's Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One|Fontdiner+Swanky|Press+Start+2P|Playball|Raleway:400,900' rel='stylesheet' type='text/css'>
    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
-   <script src="JS/basket.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/basket.js/0.5.2/basket.full.min.js"></script>
    <script type="text/javascript">
         
          var query = <?php  echo '"' . $place . '"'?>;
@@ -65,6 +66,7 @@ else
                 )
                 .then(function() {
                     basket.require(
+                        { url: 'JS/jquery.ui.touch-punch.min.js', expire: 168},
                         { url: "JS/modal.js", skipCache: true }
                     )
                 })
@@ -98,13 +100,24 @@ else
             <p class="modal-subhead"> Please Provide the Following Details</p>
           <form id="modal-form" action="index.php" method="post">
             <fieldset>
-              <label for="name">Name</label>
+              <label for="name">Please Provide your Name:</label>
               <input type="text" name="name" id="name" placeholder="Please Provide a Name" autofocus required>
-              <label for="place">Favourite Place</label>
-              <input type="text" name="place" id="place" placeholder="What is your Favourite City to Visit?" required> 
-              <label for="color">Favourite Colour</label>
-              <input type="text" name="color" id="color" placeholder="Please Provide a Favourite Colour" required>
-              <!-- Allow form submission with keyboard without duplicating the dialog button -->
+              <div class="place-form">
+                  <label for="place">Please Include your Favourite City:</label>
+                  <input type="text" name="place" id="place" placeholder="What is your Favourite City to Visit?" required> 
+              </div>
+              <label for="color">Please Pick a Color:</label>
+              <div class="styled-select">
+                  <select name="color" id="color" required>
+                    <option value="red" selected>Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option value="blue">Blue</option>
+                    <option value="brown">Brown</option>
+                  </select>
+              </div>
               <input type="submit" name="modal">
             </fieldset>
           </form>
@@ -243,18 +256,20 @@ else
                                 </div>
                         </div>
                     </div>
-                    <div class="graph-wrapper">
-                        <div class="lines">
-                           <div class="horizontal-line">
-                               <span class="right-rated">Very Passionate</span>
-                               <span class="left-rated">Humbly Passionate</span>
-                           </div>
-                           <div class="vertical-line">
-                               <span class="top-rated">Professional</span>
-                               <span class="bottom-rated">Still a Beginner</span>
-                           </div>
+                    <div class="graph-container">
+                        <div class="graph-wrapper">
+                            <div class="lines">
+                               <div class="horizontal-line">
+                                   <span class="right-rated">Very Passionate</span>
+                                   <span class="left-rated">Humbly Passionate</span>
+                               </div>
+                               <div class="vertical-line">
+                                   <span class="top-rated">Professional</span>
+                                   <span class="bottom-rated">Still a Beginner</span>
+                               </div>
+                            </div>
                         </div>
-                    </div>
+                   </div>
                 </div>
             </section>
             <section class="projects-section">
@@ -262,9 +277,6 @@ else
                   <div class="project-overview">
                        <h3 class="modal-head"></h3>
                        <p class="modal-description"></p>
-                       <div class="flexslider" id="carousel">
-                           <ul class="slides"></ul>
-                       </div>
                    </div>
                    <div class="modal-slider">
                       <div class="loading-modal">
@@ -346,7 +358,7 @@ else
                         </div>
                         <div class="project-element doubleHigh rwd less wp js jq php">
                            <img class="project-image" src="img/7jdesign-screen.png" alt="7J Design project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="7">
                                 <div class="inner-project">
                                     <p class="design7J">7J <br> Design</p>
                                 </div>
@@ -354,7 +366,7 @@ else
                         </div>
                         <div class="project-element doubleWide php bs js jq rwd">
                            <img class="project-image" src="img/TOWD-screen.png" alt="Toronto Web Design project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="8">
                                 <div class="inner-project">
                                     <p class="TOWeb">Toronto <br>  Web Design</p>
                                 </div>
@@ -362,7 +374,7 @@ else
                         </div>
                         <div class="project-element doubleHigh js jq rwd less">
                            <img class="project-image" src="img/webpro-screen.png" alt="WebPro Canada project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="9">
                                 <div class="inner-project">
                                     <p class="webpro">WebPro <br>  Canada</p>
                                 </div>
@@ -370,7 +382,7 @@ else
                         </div>
                         <div class="project-element php js jq rwd less">
                            <img class="project-image" src="img/zabihah-screen.jpeg" alt="Zabiha Halal project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="10">
                                 <div class="inner-project">
                                     <p class="halal">Zabiha Halal</p>
                                 </div>
@@ -378,7 +390,7 @@ else
                         </div>
                         <div class="project-element wp less php bs rwd">
                            <img class="project-image" src="img/solkor-screen.jpg" alt="Solkor Landscaping project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="11">
                                 <div class="inner-project">
                                     <p class="solkor">Solkor Landscaping</p>
                                 </div>
@@ -386,7 +398,7 @@ else
                         </div>
                         <div class="project-element less js jq rwd bs">
                            <img class="project-image" src="img/RCC-screen.jpg" alt="RCC Waterproofing project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="12">
                                 <div class="inner-project">
                                     <p class="rcc">RCC Waterproofing</p>
                                 </div>
@@ -394,7 +406,7 @@ else
                         </div>
                         <div class="project-element ang js sass jq rwd">
                            <img class="project-image" src="img/IGPortfolio-screen.png" alt="Ian Gauthier Portfolio project">
-                            <a class="project-tag" project-number="1">
+                            <a class="project-tag" project-number="13">
                                 <div class="inner-project">
                                     <p class="portfolio">Ian Gauthier <br> Old Portfolio</p>
                                 </div>
@@ -419,13 +431,13 @@ else
                         <div class="form-group">
                             <label for="email" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value=<?php if(isset($useremail)){ echo '"' . $useremail . '"'; } else { echo '""';} ?> required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value=<?php if(isset($email)){ echo '"' . $email . '"'; } else { echo '""';} ?> required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message" class="col-sm-2 control-label">Message</label>
                             <div class="col-sm-8">
-                                <textarea class="form-control" rows="4" name="message" placeholder="Place Message Here" required><?php if(isset($usermessage)) echo '"' . $usermessage . '"'; ?></textarea>
+                                <textarea class="form-control" rows="4" name="message" placeholder="Place Message Here" required><?php if(isset($message)) echo $message ; ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">

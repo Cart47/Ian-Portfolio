@@ -11,8 +11,17 @@ function adjustElements () {
         borderTopWidth: screenSize.Y ,
         borderRightWidth: screenSize.X * .3
     });
-    $('.graph-wrapper').width($('.graph-wrapper').height());
-    $(".projects-wrapper").css({height: (screenSize.Y - 160)}); 
+    if($('.graph-wrapper').width()>$('.graph-wrapper').height())
+    {
+        $('.graph-wrapper').width($('.graph-wrapper').height());
+    }
+    else 
+    {
+        console.log("height");
+        $('.graph-wrapper').height($('.graph-wrapper').width());
+    }
+    
+    $(".projects-wrapper, .skills-wrapper").css({height: (screenSize.Y - 160)}); 
     $(".project-container").css({height: ($(".projects-wrapper").height() - 100)});
 }
 
@@ -48,7 +57,6 @@ function prepareElements(elements) {
     });
     
     $('.darkened-background').hide();
-    
 }
 
 function slideAnimation(slideIndex) {
@@ -93,7 +101,8 @@ function getProjects (criteria) {
       dataType: 'json',                //data format      
       success: function(data)          //on recieve of reply
       {
-        makeDialog(data);
+        console.log(data);  
+        makeDialog(data); 
       },
       error: function(error)          //on recieve of reply
       { 
@@ -101,19 +110,24 @@ function getProjects (criteria) {
       }     
     });
     
+    
 }
 
 function makeDialog(data) {
 
-    $('.modal-head').html(data.title);
-    $('.modal-description').html(data.description);
-    $.each(data.images, function(key, value){
-        var image = '<img src="' + value.url + '" title=' + value.title + '"/>';
-        var caption = '<p class="flex-caption">' + value.description + '</p>';
-        $('#carousel .slides').append('<li>' + image + '</li>');
-        $('#slider .slides').append('<li>' + image + caption + '</li>');
-    });
-    initializeSliders();
+    if(data) {
+        $('.modal-head').html(data.title);
+        $('.modal-description').html(data.description);
+        $.each(data.images, function(key, value){
+            var image = '<img src="' + value.url + '" title=' + value.title + '"/>';
+            var caption = '<div class="flex-caption"><h3>' + value.title + '</h3><p>' + value.description + '</p></div>';
+            $('#slider .slides').append('<li>' + image + caption + '</li>');
+        });
+        initializeSliders();
+        $(window).resize();
+        $('.flexslider').resize();
+        $('.loading-modal').fadeOut(1000);
+    }
     
 }
 
@@ -125,28 +139,14 @@ function destroyDialog() {
 
 function initializeSliders() {
     
-    $('#carousel').flexslider({
-        animation: "slide",
-        controlNav: false,
-        animationLoop: false,
-        slideshow: false,
-        directionNav: false,
-        itemWidth: 100,
-        asNavFor: '#slider'
-    });
-    
     $('#slider').flexslider({
         animation: "fade",
         slideshow: false,
+        keyboard: false,
         animationLoop: false,
         animationSpeed: 1000,
         directionNav: false,
-        controlNav: false,
-        start: function() {
-            $('.flexslider').resize()
-            $('.loading-modal').fadeOut(1000);
-        },
-        sync: "#carousel"
+        controlNav: true
     });
     
 }

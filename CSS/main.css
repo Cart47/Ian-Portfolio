@@ -2120,6 +2120,25 @@ body {
           border-style: inset; }
       #modal-wrapper .form-wrapper input[type="text"] {
         padding: 0.1875em 0.3125em; }
+    #modal-wrapper .form-wrapper .styled-select {
+      width: 240px;
+      height: auto;
+      overflow: visible;
+      padding-left: .5em;
+      background: url(../img/down-arrow.png) no-repeat 0.5em 50%;
+      border: 1px solid #000000; }
+      #modal-wrapper .form-wrapper .styled-select select {
+        background: transparent;
+        width: 100%;
+        padding: 5px;
+        padding-left: 1.5em;
+        line-height: normal;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none; }
+        #modal-wrapper .form-wrapper .styled-select select:focus {
+          outline: 0; }
   #modal-wrapper .initial-social-icons {
     position: relative;
     z-index: 1005;
@@ -2147,7 +2166,7 @@ nav {
 nav li {
   list-style: none;
   display: inline-block;
-  border-right: 0.125em solid red; }
+  border-right: 0.125em solid green; }
 
 nav ul {
   margin-bottom: 0; }
@@ -2156,14 +2175,14 @@ nav li:last-child {
   border-right: 0; }
 
 nav li a {
-  color: cyan;
+  color: purple;
   font-size: 1em;
   text-transform: uppercase;
   padding: 0.375em 0.9375em;
   display: block; }
 
 nav li a:hover {
-  color: red;
+  color: green;
   cursor: pointer; }
 
 section {
@@ -2205,11 +2224,11 @@ section {
       -moz-transition: -moz-transform, 0.5s, ease-in;
       transition: transform, 0.5s, ease-in; }
     .social-wrapper li a {
-      color: cyan;
+      color: purple;
       background-color: #000000;
       padding: 0.3125em 0.5em; }
       .social-wrapper li a:hover {
-        color: red; }
+        color: green; }
     .social-wrapper li i {
       font-size: 1.875em;
       margin: 0.5em 0; }
@@ -2224,7 +2243,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: red; }
+  background-color: green; }
 
 .front-wrapper {
   position: relative;
@@ -2270,51 +2289,51 @@ section {
   border-right-color: transparent; }
 
 .triangle1 {
-  border-top-color: #ffa8a8;
+  border-top-color: #29ff29;
   left: -33%; }
 
 .triangle2 {
-  border-top-color: #ff9999;
+  border-top-color: #1aff1a;
   left: -30%; }
 
 .triangle3 {
-  border-top-color: #ff8a8a;
+  border-top-color: #0bff0b;
   left: -27%; }
 
 .triangle4 {
-  border-top-color: #ff7a7a;
+  border-top-color: #00fa00;
   left: -24%; }
 
 .triangle5 {
-  border-top-color: #ff6b6b;
+  border-top-color: #00eb00;
   left: -21%; }
 
 .triangle6 {
-  border-top-color: #ff5c5c;
+  border-top-color: #00dc00;
   left: -18%; }
 
 .triangle7 {
-  border-top-color: #ff4d4d;
+  border-top-color: #00cc00;
   left: -15%; }
 
 .triangle8 {
-  border-top-color: #ff3d3d;
+  border-top-color: #00bd00;
   left: -12%; }
 
 .triangle9 {
-  border-top-color: #ff2e2e;
+  border-top-color: #00ae00;
   left: -9%; }
 
 .triangle10 {
-  border-top-color: #ff1f1f;
+  border-top-color: #009f00;
   left: -6%; }
 
 .triangle11 {
-  border-top-color: #ff0f0f;
+  border-top-color: #008f00;
   left: -3%; }
 
 .triangle12 {
-  border-top-color: red;
+  border-top-color: green;
   left: 0; }
 
 .main-headings {
@@ -2328,7 +2347,7 @@ section {
   font-size: 3.125em;
   padding: 0.5em 1.25em;
   color: #000000;
-  background-color: red;
+  background-color: green;
   margin-bottom: 0.3125em; }
 
 .main-headings h2 {
@@ -2336,7 +2355,7 @@ section {
   font-size: 2em;
   color: #000000;
   padding: 0.3125em 1.25em;
-  background-color: red; }
+  background-color: green; }
 
 .scroll-wrapper {
   position: fixed;
@@ -2348,7 +2367,7 @@ section {
   z-index: 1000; }
 
 .scroll-wrapper p {
-  color: red;
+  color: green;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.75em;
   font-weight: bold;
@@ -2370,7 +2389,7 @@ section {
   border-top-left-radius: 50%; }
 
 .scroll-down i {
-  color: red;
+  color: green;
   line-height: 1.875em;
   font-size: 1.5em;
   padding-left: 0.1875em; }
@@ -2404,7 +2423,7 @@ section {
     width: 90%;
     z-index: 103;
     font-family: 'Playball', cursive;
-    color: red; }
+    color: green; }
   .intro-content p {
     position: relative;
     z-index: 103;
@@ -2416,7 +2435,7 @@ section {
       font-size: 1.375em; }
     .intro-content p a {
       cursor: pointer;
-      color: red; }
+      color: green; }
 
 .myPic {
   position: absolute;
@@ -2430,8 +2449,8 @@ section {
   left: 6em;
   top: 7em;
   z-index: 103;
-  box-shadow: 0 0 0 1em red, 0 1em 0 1em red, -2.5em 1.5em 0 0.5em red, 2.5em 1.5em 0 0.5em red, -3em -3em 0 0 red, 3em -3em 0 0 red, -2em -2em 0 0 red, 2em -2em 0 0 red, -3em -1em 0 0 red, -2em -1em 0 0 red, 2em -1em 0 0 red, 3em -1em 0 0 red, -4em 0 0 0 red, -3em 0 0 0 red, 3em 0 0 0 red, 4em 0 0 0 red, -5em 1em 0 0 red, -4em 1em 0 0 red, 4em 1em 0 0 red, 5em 1em 0 0 red, -5em 2em 0 0 red, 5em 2em 0 0 red, -5em 3em 0 0 red, -3em 3em 0 0 red, 3em 3em 0 0 red, 5em 3em 0 0 red, -2em 4em 0 0 red, -1em 4em 0 0 red, 1em 4em 0 0 red, 2em 4em 0 0 red;
-  background: red;
+  box-shadow: 0 0 0 1em green, 0 1em 0 1em green, -2.5em 1.5em 0 0.5em green, 2.5em 1.5em 0 0.5em green, -3em -3em 0 0 green, 3em -3em 0 0 green, -2em -2em 0 0 green, 2em -2em 0 0 green, -3em -1em 0 0 green, -2em -1em 0 0 green, 2em -1em 0 0 green, 3em -1em 0 0 green, -4em 0 0 0 green, -3em 0 0 0 green, 3em 0 0 0 green, 4em 0 0 0 green, -5em 1em 0 0 green, -4em 1em 0 0 green, 4em 1em 0 0 green, 5em 1em 0 0 green, -5em 2em 0 0 green, 5em 2em 0 0 green, -5em 3em 0 0 green, -3em 3em 0 0 green, 3em 3em 0 0 green, 5em 3em 0 0 green, -2em 4em 0 0 green, -1em 4em 0 0 green, 1em 4em 0 0 green, 2em 4em 0 0 green;
+  background: green;
   width: 1em;
   height: 1em;
   overflow: hidden;
@@ -2441,10 +2460,9 @@ section {
   background-color: #ffffff; }
   .skills-section .skills-wrapper {
     position: absolute;
-    top: 5%;
-    left: 7%;
-    width: 93%;
-    height: 80%; }
+    top: 3em;
+    left: 6%;
+    width: 94%; }
     .skills-section .skills-wrapper h2 {
       position: relative;
       width: 100%;
@@ -2452,13 +2470,14 @@ section {
       font-family: 'Playball', cursive;
       font-size: 2.5em;
       z-index: 103;
-      color: red;
-      margin-bottom: 0; }
+      margin-top: 0;
+      color: green;
+      margin-bottom: 1em; }
     .skills-section .skills-wrapper .skills {
       margin-top: 1em;
       position: relative;
       z-index: 105;
-      width: 50%; }
+      width: 60%; }
       .skills-section .skills-wrapper .skills .left-column {
         width: 50%;
         float: left;
@@ -2485,17 +2504,23 @@ section {
           font-family: 'Poiret One', cursive;
           font-size: 1.1em;
           line-height: 1.25em;
-          color: red; }
+          color: green; }
           .skills-section .skills-wrapper .skills .skill-group li:hover {
             text-decoration: underline;
             color: #000000;
             cursor: move; }
+    .skills-section .skills-wrapper .graph-container {
+      position: absolute;
+      height: -webkit-calc(100% - 6em);
+      height: calc(100% - 6em);
+      width: 40%;
+      right: 5%; }
     .skills-section .skills-wrapper .graph-wrapper {
       position: absolute;
+      margin: 0 auto;
       z-index: 101;
-      right: 10%;
-      width: 50%;
-      height: 75%; }
+      width: 100%;
+      height: 100%; }
       .skills-section .skills-wrapper .graph-wrapper .vertical-line {
         position: absolute;
         width: 0.125em;
@@ -2661,7 +2686,7 @@ section {
       .projects-section .projects-wrapper .project-sorting button {
         flex-grow: 1;
         color: #000000;
-        background-color: red;
+        background-color: green;
         font-family: 'Raleway', sans-serif;
         font-size: 0.875em;
         padding-top: 0.3125em;
@@ -2753,10 +2778,63 @@ section {
   height: 100%;
   opacity: .1; }
 
+.ui-menu .ui-menu-item a, .ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active {
+  font-weight: normal;
+  margin: -1px;
+  text-align: left;
+  font-size: 14px; }
+
+.ui-autocomplete-loading {
+  background: white url("../img/ui-anim_basic_16x16.gif") right center no-repeat; }
+
+.place-form {
+  position: relative; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  background-color: darkcyan;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  font-weight: normal; }
+
+.ui-autocomplete {
+  background-color: #ffffff;
+  z-index: 10000;
+  list-style: none;
+  width: 10em;
+  left: 5em;
+  position: absolute !important;
+  border: #000000 solid 1px;
+  -webkit-box-shadow: 6px 6px 22px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 22px 0px rgba(0, 0, 0, 0.75); }
+  .ui-autocomplete li {
+    position: relative;
+    top: 0; }
+    .ui-autocomplete li:first-child {
+      padding-top: 0;
+      margin-top: 0;
+      height: auto; }
+    .ui-autocomplete li:hover, .ui-autocomplete li:active {
+      background-color: darkcyan !important;
+      color: white !important; }
+
 .ui-dialog {
   z-index: 5000;
   background-color: #ffffff;
   position: relative; }
+  .ui-dialog .flexslider:hover .flex-direction-nav .flex-prev, .ui-dialog .flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 1 !important; }
+    .ui-dialog .flexslider:hover .flex-direction-nav .flex-prev:hover:before, .ui-dialog .flexslider:hover .flex-direction-nav .flex-next:hover:before {
+      color: purple !important; }
+  .ui-dialog .flex-control-nav {
+    z-index: 10000; }
+  .ui-dialog .flex-direction-nav a {
+    height: 50px;
+    width: 40px; }
+    .ui-dialog .flex-direction-nav a:before {
+      color: green;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); }
   .ui-dialog .ui-dialog-titlebar {
     z-index: 5001;
     position: relative; }
@@ -2783,47 +2861,55 @@ section {
   .loading-modal img {
     width: 6em;
     position: absolute;
-    top: -webkit-calc(50% - 3em);
-    top: calc(50% - 3em);
+    top: 15em;
     left: -webkit-calc(50% - 3em);
     left: calc(50% - 3em); }
 
-.modal-head {
-  font-size: 4em;
-  font-family: "Playball", cursive; }
-
 .project-overview {
   position: absolute;
-  width: 45%;
-  height: 100%;
-  left: 2em; }
-  .project-overview #carousel {
-    position: absolute;
-    width: 90%;
-    left: 5%;
-    bottom: 0; }
-    .project-overview #carousel .slides li {
-      margin-left: .25em; }
+  width: 50%;
+  height: 90%;
+  right: 2em;
+  padding-left: 2em;
+  border-left: green 0.1em dashed; }
+  .project-overview .modal-head {
+    font-size: 4em;
+    font-family: "Playball", cursive; }
+  .project-overview .modal-description {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.2em;
+    width: 95%;
+    margin-left: 1em; }
 
 .modal-slider {
   position: relative;
   width: 45%;
-  float: right; }
+  float: left; }
+  .modal-slider .flex-caption h3 {
+    width: 90%;
+    margin-left: 5%; }
+  .modal-slider .flex-caption p {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.15em;
+    width: 90%;
+    margin-left: 5%;
+    line-height: normal;
+    background-color: transparent; }
 
 #slider {
-  width: 100%; }
-  #slider .slides img {
-    max-height: 20em; }
-
-.flex-caption {
   width: 100%;
-  padding: 2%;
-  left: 0;
-  bottom: 0;
-  margin-top: 1em;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  line-height: 18px; }
+  background-color: transparent;
+  border: 0; }
+  #slider .slides {
+    background-color: transparent; }
+    #slider .slides img {
+      max-height: 20em;
+      max-width: 100%;
+      width: auto;
+      margin: 0 auto;
+      -webkit-box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75);
+      -moz-box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75);
+      box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75); }
 
 .darkened-background {
   position: absolute;
@@ -3392,7 +3478,27 @@ html[xmlns] .flexslider .slides {
     color: green; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   body {
-    color: blue; } }
+    font-size: 1.4em; }
+
+  .skills-section .skills-wrapper h2 {
+    font-size: 1.875em; }
+  .skills-section .skills-wrapper .graph-container {
+    width: 40%;
+    right: 5%; }
+  .skills-section .skills-wrapper .skills .left-column {
+    max-width: 16em; }
+  .skills-section .skills-wrapper .skills .right-column {
+    max-width: 16em;
+    margin-left: .75em; }
+  .skills-section .skills-wrapper .skills .skill-group h3 {
+    font-size: 1.25em;
+    margin: 0 0 0.625em -0.9375em;
+    padding-bottom: .1em;
+    color: #000000;
+    border-bottom: 1px solid #000000; }
+  .skills-section .skills-wrapper .skills .skill-group li {
+    font-size: 1em;
+    line-height: 1.2em; } }
 @media (min-width: 1200px) {
   body {
     font-size: 1.5em; } }
