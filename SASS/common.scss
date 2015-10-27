@@ -543,7 +543,12 @@ section {
             z-index: 103;
             margin-top: 0;
             color: $primary-color;
-            margin-bottom: 1em;
+            margin-bottom: .2em;
+        }
+        
+        p {
+            font-family: monospace;
+            font-weight: bold;
         }
         
         .skills {
@@ -1065,9 +1070,9 @@ section {
 .design7J { font-size: 3em; } // 7J
 .TOWeb { font-size: 3em; } // TO Web
 .webpro { font-size: 3em; } //WebPro
-.halal { font-size: 2em; } // Zabiha
+.royal { font-size: 2em; } // Zabiha
 .solkor { font-size: 2em; } //Solkor
-.rcc { font-size: 2em}  // RCC Waterproofing
+.theatre { font-size: 2em}  // RCC Waterproofing
 .portfolio { font-size:2em; } //Old Porfolio
 
 .contact-section {

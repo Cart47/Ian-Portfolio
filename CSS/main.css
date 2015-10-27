@@ -2166,7 +2166,7 @@ nav {
 nav li {
   list-style: none;
   display: inline-block;
-  border-right: 0.125em solid green; }
+  border-right: 0.125em solid brown; }
 
 nav ul {
   margin-bottom: 0; }
@@ -2175,14 +2175,14 @@ nav li:last-child {
   border-right: 0; }
 
 nav li a {
-  color: purple;
+  color: #2aa5a5;
   font-size: 1em;
   text-transform: uppercase;
   padding: 0.375em 0.9375em;
   display: block; }
 
 nav li a:hover {
-  color: green;
+  color: brown;
   cursor: pointer; }
 
 section {
@@ -2224,11 +2224,11 @@ section {
       -moz-transition: -moz-transform, 0.5s, ease-in;
       transition: transform, 0.5s, ease-in; }
     .social-wrapper li a {
-      color: purple;
+      color: #2aa5a5;
       background-color: #000000;
       padding: 0.3125em 0.5em; }
       .social-wrapper li a:hover {
-        color: green; }
+        color: brown; }
     .social-wrapper li i {
       font-size: 1.875em;
       margin: 0.5em 0; }
@@ -2243,7 +2243,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: green; }
+  background-color: brown; }
 
 .front-wrapper {
   position: relative;
@@ -2289,51 +2289,51 @@ section {
   border-right-color: transparent; }
 
 .triangle1 {
-  border-top-color: #29ff29;
+  border-top-color: #e49494;
   left: -33%; }
 
 .triangle2 {
-  border-top-color: #1aff1a;
+  border-top-color: #e18787;
   left: -30%; }
 
 .triangle3 {
-  border-top-color: #0bff0b;
+  border-top-color: #dd7b7b;
   left: -27%; }
 
 .triangle4 {
-  border-top-color: #00fa00;
+  border-top-color: #da6f6f;
   left: -24%; }
 
 .triangle5 {
-  border-top-color: #00eb00;
+  border-top-color: #d76363;
   left: -21%; }
 
 .triangle6 {
-  border-top-color: #00dc00;
+  border-top-color: #d45757;
   left: -18%; }
 
 .triangle7 {
-  border-top-color: #00cc00;
+  border-top-color: #d14a4a;
   left: -15%; }
 
 .triangle8 {
-  border-top-color: #00bd00;
+  border-top-color: #ce3e3e;
   left: -12%; }
 
 .triangle9 {
-  border-top-color: #00ae00;
+  border-top-color: #ca3333;
   left: -9%; }
 
 .triangle10 {
-  border-top-color: #009f00;
+  border-top-color: #bd3030;
   left: -6%; }
 
 .triangle11 {
-  border-top-color: #008f00;
+  border-top-color: #b12d2d;
   left: -3%; }
 
 .triangle12 {
-  border-top-color: green;
+  border-top-color: brown;
   left: 0; }
 
 .main-headings {
@@ -2347,7 +2347,7 @@ section {
   font-size: 3.125em;
   padding: 0.5em 1.25em;
   color: #000000;
-  background-color: green;
+  background-color: brown;
   margin-bottom: 0.3125em; }
 
 .main-headings h2 {
@@ -2355,7 +2355,7 @@ section {
   font-size: 2em;
   color: #000000;
   padding: 0.3125em 1.25em;
-  background-color: green; }
+  background-color: brown; }
 
 .scroll-wrapper {
   position: fixed;
@@ -2367,7 +2367,7 @@ section {
   z-index: 1000; }
 
 .scroll-wrapper p {
-  color: green;
+  color: brown;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.75em;
   font-weight: bold;
@@ -2389,7 +2389,7 @@ section {
   border-top-left-radius: 50%; }
 
 .scroll-down i {
-  color: green;
+  color: brown;
   line-height: 1.875em;
   font-size: 1.5em;
   padding-left: 0.1875em; }
@@ -2423,7 +2423,7 @@ section {
     width: 90%;
     z-index: 103;
     font-family: 'Playball', cursive;
-    color: green; }
+    color: brown; }
   .intro-content p {
     position: relative;
     z-index: 103;
@@ -2435,7 +2435,7 @@ section {
       font-size: 1.375em; }
     .intro-content p a {
       cursor: pointer;
-      color: green; }
+      color: brown; }
 
 .myPic {
   position: absolute;
@@ -2449,8 +2449,8 @@ section {
   left: 6em;
   top: 7em;
   z-index: 103;
-  box-shadow: 0 0 0 1em green, 0 1em 0 1em green, -2.5em 1.5em 0 0.5em green, 2.5em 1.5em 0 0.5em green, -3em -3em 0 0 green, 3em -3em 0 0 green, -2em -2em 0 0 green, 2em -2em 0 0 green, -3em -1em 0 0 green, -2em -1em 0 0 green, 2em -1em 0 0 green, 3em -1em 0 0 green, -4em 0 0 0 green, -3em 0 0 0 green, 3em 0 0 0 green, 4em 0 0 0 green, -5em 1em 0 0 green, -4em 1em 0 0 green, 4em 1em 0 0 green, 5em 1em 0 0 green, -5em 2em 0 0 green, 5em 2em 0 0 green, -5em 3em 0 0 green, -3em 3em 0 0 green, 3em 3em 0 0 green, 5em 3em 0 0 green, -2em 4em 0 0 green, -1em 4em 0 0 green, 1em 4em 0 0 green, 2em 4em 0 0 green;
-  background: green;
+  box-shadow: 0 0 0 1em brown, 0 1em 0 1em brown, -2.5em 1.5em 0 0.5em brown, 2.5em 1.5em 0 0.5em brown, -3em -3em 0 0 brown, 3em -3em 0 0 brown, -2em -2em 0 0 brown, 2em -2em 0 0 brown, -3em -1em 0 0 brown, -2em -1em 0 0 brown, 2em -1em 0 0 brown, 3em -1em 0 0 brown, -4em 0 0 0 brown, -3em 0 0 0 brown, 3em 0 0 0 brown, 4em 0 0 0 brown, -5em 1em 0 0 brown, -4em 1em 0 0 brown, 4em 1em 0 0 brown, 5em 1em 0 0 brown, -5em 2em 0 0 brown, 5em 2em 0 0 brown, -5em 3em 0 0 brown, -3em 3em 0 0 brown, 3em 3em 0 0 brown, 5em 3em 0 0 brown, -2em 4em 0 0 brown, -1em 4em 0 0 brown, 1em 4em 0 0 brown, 2em 4em 0 0 brown;
+  background: brown;
   width: 1em;
   height: 1em;
   overflow: hidden;
@@ -2471,8 +2471,11 @@ section {
       font-size: 2.5em;
       z-index: 103;
       margin-top: 0;
-      color: green;
-      margin-bottom: 1em; }
+      color: brown;
+      margin-bottom: .2em; }
+    .skills-section .skills-wrapper p {
+      font-family: monospace;
+      font-weight: bold; }
     .skills-section .skills-wrapper .skills {
       margin-top: 1em;
       position: relative;
@@ -2504,7 +2507,7 @@ section {
           font-family: 'Poiret One', cursive;
           font-size: 1.1em;
           line-height: 1.25em;
-          color: green; }
+          color: brown; }
           .skills-section .skills-wrapper .skills .skill-group li:hover {
             text-decoration: underline;
             color: #000000;
@@ -2686,7 +2689,7 @@ section {
       .projects-section .projects-wrapper .project-sorting button {
         flex-grow: 1;
         color: #000000;
-        background-color: green;
+        background-color: brown;
         font-family: 'Raleway', sans-serif;
         font-size: 0.875em;
         padding-top: 0.3125em;
@@ -2826,14 +2829,14 @@ section {
   .ui-dialog .flexslider:hover .flex-direction-nav .flex-prev, .ui-dialog .flexslider:hover .flex-direction-nav .flex-next {
     opacity: 1 !important; }
     .ui-dialog .flexslider:hover .flex-direction-nav .flex-prev:hover:before, .ui-dialog .flexslider:hover .flex-direction-nav .flex-next:hover:before {
-      color: purple !important; }
+      color: #2aa5a5 !important; }
   .ui-dialog .flex-control-nav {
     z-index: 10000; }
   .ui-dialog .flex-direction-nav a {
     height: 50px;
     width: 40px; }
     .ui-dialog .flex-direction-nav a:before {
-      color: green;
+      color: brown;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); }
   .ui-dialog .ui-dialog-titlebar {
     z-index: 5001;
@@ -2871,7 +2874,7 @@ section {
   height: 90%;
   right: 2em;
   padding-left: 2em;
-  border-left: green 0.1em dashed; }
+  border-left: brown 0.1em dashed; }
   .project-overview .modal-head {
     font-size: 4em;
     font-family: "Playball", cursive; }
@@ -2907,9 +2910,9 @@ section {
       max-width: 100%;
       width: auto;
       margin: 0 auto;
-      -webkit-box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75);
-      -moz-box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75);
-      box-shadow: 6px 6px 22px 0px rgba(0, 128, 0, 0.75); }
+      -webkit-box-shadow: 6px 6px 22px 0px rgba(165, 42, 42, 0.75);
+      -moz-box-shadow: 6px 6px 22px 0px rgba(165, 42, 42, 0.75);
+      box-shadow: 6px 6px 22px 0px rgba(165, 42, 42, 0.75); }
 
 .darkened-background {
   position: absolute;
@@ -2947,13 +2950,13 @@ section {
 .webpro {
   font-size: 3em; }
 
-.halal {
+.royal {
   font-size: 2em; }
 
 .solkor {
   font-size: 2em; }
 
-.rcc {
+.theatre {
   font-size: 2em; }
 
 .portfolio {

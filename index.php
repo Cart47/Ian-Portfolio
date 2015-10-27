@@ -199,6 +199,7 @@ else
             <section class="skills-section">
                 <div class="skills-wrapper">
                     <h2>Take a Look <?php echo $name ?>, I Have a Few Skills You Might Find Helpful</h2>
+                    <p>Drag each skill over the graph to find out more</p>
                     <div class="skills">
                            <div class="left-column">
                                 <div class="skill-group">
@@ -381,10 +382,10 @@ else
                             </a>
                         </div>
                         <div class="project-element php js jq rwd less">
-                           <img class="project-image" src="img/zabihah-screen.jpeg" alt="Zabiha Halal project">
+                           <img class="project-image" src="img/royalAmbassador.png" alt="Zabiha Halal project">
                             <a class="project-tag" project-number="10">
                                 <div class="inner-project">
-                                    <p class="halal">Zabiha Halal</p>
+                                    <p class="royal">Royal Ambassador Catering</p>
                                 </div>
                             </a>
                         </div>
@@ -396,11 +397,11 @@ else
                                 </div>
                             </a>
                         </div>
-                        <div class="project-element less js jq rwd bs">
-                           <img class="project-image" src="img/RCC-screen.jpg" alt="RCC Waterproofing project">
+                        <div class="project-element js">
+                           <img class="project-image" src="img/RCC-screen.jpg" alt="Theatrics PLus project">
                             <a class="project-tag" project-number="12">
                                 <div class="inner-project">
-                                    <p class="rcc">RCC Waterproofing</p>
+                                    <p class="theatre">Theatrics Plus</p>
                                 </div>
                             </a>
                         </div>
@@ -419,7 +420,7 @@ else
             <section class="contact-section">
                 <div class="contact-wrapper">
                     <div class="col-sm-12">
-                        <h3 class="col-sm-push-1 col-sm-10">Feel free to drop me a line, <?php echo $name; ?> by using the form below</h3>
+                        <h3 class="col-sm-push-1 col-sm-10">Feel free to drop me a line <?php echo $name; ?>, by using the form below</h3>
                     </div>
                     <form class="form-horizontal" id="contact-form" role="form" method="post" action="contact.php">
                         <div class="form-group">
