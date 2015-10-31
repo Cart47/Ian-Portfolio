@@ -141,7 +141,8 @@ function initializeSliders() {
     
     $('#slider').flexslider({
         animation: "fade",
-        slideshow: false,
+        slideshow: true,
+        pauseOnHover: true,
         keyboard: false,
         animationLoop: false,
         animationSpeed: 1000,

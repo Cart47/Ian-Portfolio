@@ -927,6 +927,7 @@ section {
     
     .flex-control-nav { 
         z-index: 10000;
+        bottom: 0;
     }
     
     .flex-direction-nav {
@@ -1032,6 +1033,7 @@ section {
     width: 100%;
     background-color: transparent;
     border: 0;
+    margin-bottom: 0;
     
     .slides {
         

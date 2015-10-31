@@ -95,6 +95,10 @@ $(function(){
       }
     });
     
+    $('.darkened-background').click(function(){
+        $( "#project-modal" ).dialog("close");
+    });
+    
     $( "#project-modal" ).dialog({
       autoOpen: false,
       draggable: false,
